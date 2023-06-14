@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import Hover from './Components/HigherOrder/Hover'
+import Click from './Components/HigherOrder/Click'
+import NormalCompo from './Components/PureCompo/NormalCompo'
+import PureCompo from './Components/PureCompo/PureCompo'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='main-box'>
+      <h2>HigherOrder Components</h2>
+      <div className='box'>
+        <Hover/>
+        <Click/>
+      </div>
+
+      <h2>Pure Component</h2>
+      <div className='box'>
+        <NormalCompo/>
+        <PureCompo/>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
